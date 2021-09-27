@@ -62,10 +62,12 @@ def resourceCount():
 #def resourceCheck():
 #  for i in MENU[user_input]['ingredients']
 def coffee():
-  
-  while True: 
+  machine = True
+  while machine: 
     global user_input
     user_input = input("What do u want to take ?(latte/espresso/cappuccino)")
+    if user_input == "off": 
+      machine=False
     if user_input== "report": 
       print(f'''
     remaining water = {resources ['water']} 
